@@ -11,7 +11,34 @@ body{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
+}
+/* Частковий ресет */
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+/* Visually-hidden */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+/* Утилітарні */
+.section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+    outline: 1px dashed red;
 }
 /* Хедер */
 .logo{
@@ -22,6 +49,8 @@ body{
     line-height: 1.19;
     color: var(--accent-color);
     text-decoration: none;
+
+    margin-right: 93px;
 }
 .logo-black{
     color: #000000;
@@ -41,6 +70,9 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+.header-link{
+
+}
 .header-link:hover,
 .header-link:focus {
     color: var(--accent-color);
@@ -55,18 +87,48 @@ body{
     font-weight: 700;
     color: var(--title-text-color);
 }
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header .container{
+    display: flex;
+    align-items: center;
+}
+.site-nav .list,
+.contacts-list{
+    display: flex;
+}
+.contacts-list{
+    margin-left: auto;
+}
+.site-nav-item:not(:last-child),
+.contacts-item:not(:last-child){
+    margin-right: 50px;
+}
+.site-nav-item,
+.contacts-item{
+    display: block;
+    padding: 32px 0;
+}
 /* Герой */
 .hero{
     background-color: var(--backgraund-color-dark);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title{
     font-weight: 900;
     font-size: 44px;
+    width: 696px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--text-color-white);
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .hero-btn{
     font-family: inherit;
@@ -79,12 +141,22 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
 }
 /* Особенности  */
-.features .title{
+.features-title{
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.feature-list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 270px;
+    flex-shrink: calc(100%-30px*3)/4;
+    gap: 25px;
 }
 /* Чем мы занимаемся */
 .section-title {
