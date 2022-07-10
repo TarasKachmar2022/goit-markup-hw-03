@@ -24,6 +24,11 @@ ul{
     padding: 0;
     margin: 0;
 }
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
 /* Visually-hidden */
 .visually-hidden {
     position: absolute;
@@ -178,11 +183,6 @@ ul{
 .work-types-list{
     --item: 3;
 }
-.work-types .images{
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
 /* Наша команда */
 .team{
     background-color: var(--backgraund-color-grey);
@@ -216,6 +216,10 @@ ul{
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer .logo{
+    margin-bottom: 20px;
+    display: block;
+}
 .footer-list{
     background-color: inherit;
     gap: 9px;
@@ -226,7 +230,6 @@ ul{
     margin-bottom: 9px;
 }
 .address{
-    padding-top: 20px;
     font-style: inherit;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -266,9 +269,6 @@ ul{
 }
 .portfolio-list{
     --item: 3;
-}
-.portfolio-img{
-    display: flex;
 }
 .portfolio-container{
     padding-top: 20px;
